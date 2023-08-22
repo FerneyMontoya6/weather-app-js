@@ -49,7 +49,7 @@ const getWeather = async (latitude, longitude) => {
 btn.addEventListener('click', () => {
     city = input.value
 
-    const weather = getLocalParameters(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`);
+    const weather = getLocalParameters(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`);
     
     weather.then((res) => {
         latitude = res[0];
@@ -61,7 +61,7 @@ btn.addEventListener('click', () => {
     })
     .then((data) => {
         const temperatureInKelvin = data.main.temp - 273.15;
-        
+
         p.innerHTML = temperatureInKelvin;
     });
         
