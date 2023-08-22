@@ -1,0 +1,15 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.ciudad {
+    margin: 0;
+    text-align: start;
+}
+
+.response {
+    display: inline-block;
+}
