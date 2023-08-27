@@ -1,15 +1,139 @@
+:root {
+    --main-color: #111940;
+    --gray-color: #cfd1d9;
+    --gray-text: rgba(255, 255, 255, 0.74);
+    --white: #ffff;
+
+    --country-background: #f4d257;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Karla', sans-serif;
+}
+
 body {
+    max-width: 100rem;
     height: 100vh;
-    display: grid;
-    place-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+header {
+    width: 100%;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img {
+    width: 6rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.searcher--input-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.searcher p {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.searcher input {
+    width: 33rem;
+    height: 5.5rem;
+    margin-bottom: 2rem;
+    border: none;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+    background-color: var(--gray-color);
+    text-align: center;
+    outline: none;
+}
+.searcher input::placeholder {
     text-align: center;
 }
 
-.ciudad {
-    margin: 0;
-    text-align: start;
+.searcher button {
+    width: 15rem;
+    height: 5.5rem;
+    border-radius: 1rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--white);
+    letter-spacing: 0.05rem;
 }
 
-.response {
-    display: inline-block;
+.cards-container {
+    min-width: 32rem;
+    max-width: 100rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
+
+.card {
+    width: 19rem;
+    height: 24rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--main-color);
+}
+.card--city-container {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-text);
+}
+.card--city-container p {
+    margin-right: 0.3rem;
+}
+.card--city-container span {
+
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.9rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    background-color: var(--country-background);
+    color: #111940;
+}
+.card--city-container img {
+    width: 2rem;
+}
+.card--temperature-container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.card--temperature-container p {
+    font-family: 'Inter', sans-serif;
+}
+
+.card--weather-description {
+    font-size: 1.3rem;
+    color: var(--gray-color);
+}
+

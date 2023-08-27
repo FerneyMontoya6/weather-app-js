@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/weather-app-icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
-    
     <title>Weather app</title>
 </head>
 <body>
     
-    <main>
-        <div>
-            <p class="ciudad">Ciudad:</p>
-            <input id="input" type="text">
-            <button>Enviar</button>
+    <header>
+        <h1>WEATHER APP</h1>
+        <img src="./assets/main-image.png" alt="weather app icon">
+    </header>
+
+    <section class="searcher">
+        <p>
+            ¡Comienza a explorar y prepárate para enfrentar el día con anticipación!
+        </p>
+        <div class="searcher--input-container">
+            <input id="input" placeholder="Ingresa una ciudad" type="text">
+            <button>¡Consultar!</button>
         </div>
-        <p class="response">---</p>
-        <span>°C</span>
+    </section>
+    
+    <main class="cards-container">
+
+        <!-- <article class="card">
+            <div class="card--city-container">
+                <p>Bucaramanga <span>CO</span> </p>
+                <img src="./assets/close.png" alt="close icon card">
+            </div>
+            
+            <div class="card--temperature-container">
+                <p>28</p>
+                <span>°C</span>
+            </div>
+            
+            <img class="card--img-weather" src="./assets/img-prueba.png" alt="card image weather">
+            
+            <p class="card--weather-description">nubes dispersas</p>
+        </article> -->
+
     </main>
 
     <script src="./main.js"></script>
