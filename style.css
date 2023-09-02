@@ -77,12 +77,16 @@ h1 {
     background-color: var(--main-color);
     color: var(--white);
     letter-spacing: 0.05rem;
+    transition: transform 0.3s ease;
+}
+.searcher button:active {
+    transform: scale(0.9);
 }
 
 .cards-container {
-    min-width: 32rem;
+    min-width: 18rem;
     max-width: 100rem;
-    margin-top: 5rem;
+    margin: 5rem 3rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
