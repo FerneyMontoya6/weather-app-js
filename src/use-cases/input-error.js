@@ -28,7 +28,7 @@ export const inputError = (error) => {
     }
 
     const imgWarning = document.createElement('img');
-    imgWarning.src = '../../assets/warning.png';
+    imgWarning.src = 'https://cdn-icons-png.flaticon.com/512/4201/4201973.png';
     imgWarning.alt = 'warning icon';
     imgWarning.style.width = '1.8rem';
     imgWarning.style.height = '1.8rem';
