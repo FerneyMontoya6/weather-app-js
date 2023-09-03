@@ -1,5 +1,13 @@
 const cardsContainer = document.querySelector('.cards-container');
 
+/**
+ * Función que hace toda la contrucción de una nueva card
+ * @param {Number} temperature Ejemplo -> 27
+ * @param {String} cityName Ejemplo -> Medellín 
+ * @param {String} cityCountry Ejemplo -> Colombia 
+ * @param {String} imgIcon Ejemplo -> https://image.jpg
+ * @param {String} cityWeatherDescription Ejemplo -> light rain
+ */
 export const buildCard = (temperature, cityName, cityCountry, imgIcon, cityWeatherDescription) => {
     const card = document.createElement('article');
     card.className = 'card';
@@ -24,6 +32,9 @@ export const buildCard = (temperature, cityName, cityCountry, imgIcon, cityWeath
     const imgCardCityContainer = document.createElement('img');
     imgCardCityContainer.src = './assets/close.png'
     imgCardCityContainer.alt = 'close icon card';
+    imgCardCityContainer.loading = 'lazy';
+    
+    // Se añade evento al icono de close de la carta
     imgCardCityContainer.addEventListener('click', () => card.remove())
     cardCityContainer.append(imgCardCityContainer);
 
