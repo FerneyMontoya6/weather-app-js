@@ -8,5 +8,8 @@ export const resetInput = () => {
     input.classList.remove('input-error');
 
     const divWarningContainer = document.querySelector('.div-warning-container');
-    labelInput.removeChild(divWarningContainer);
+
+    if (divWarningContainer !== null) {
+        labelInput.removeChild(divWarningContainer);
+    }
 }

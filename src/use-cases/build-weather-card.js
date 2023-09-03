@@ -1,3 +1,5 @@
+import { globalVariables } from "./global-variables.js";
+
 const cardsContainer = document.querySelector('.cards-container');
 
 /**
@@ -35,7 +37,16 @@ export const buildCard = (temperature, cityName, cityCountry, imgIcon, cityWeath
     imgCardCityContainer.loading = 'lazy';
     
     // Se añade evento al icono de close de la carta
-    imgCardCityContainer.addEventListener('click', () => card.remove())
+    imgCardCityContainer.addEventListener('click', () => {
+
+      const citiesArray = globalVariables.getCitiesConsulted();
+      const indexToRemove = citiesArray.indexOf(cityName);
+
+      if(indexToRemove !== -1) {
+            citiesArray.splice(indexToRemove, 1)
+      }
+      card.remove()
+    })
     cardCityContainer.append(imgCardCityContainer);
 
     const cardTemperatureContainer = document.createElement('div'),
